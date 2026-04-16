@@ -6,13 +6,13 @@
 }
 
 .titlefy h1 {
-  font-size: 15rem;
+  font-size: 8rem;
 }
 
 :root {
-  --perspective: 1800px;
+  --perspective: 1000px;
   --item_nums: 8; /* no of items */
-  --radius: 800px
+  --radius: 200px
 }
 
 .scene{
@@ -29,19 +29,18 @@
 
 .scene .rotation{
   position: absolute;
-  width: 550px;
-  height: 800px;
+  width: 50px;
+  height: 100px;
   top: 30%;
-  left: calc(50% - 50px);
   transform-style: preserve-3d;
-  animation: autoRun 20s linear infinite;
+  animation: autoRun 15s linear infinite;
 }
 
 @keyframes autoRun {
   from{
-    transform: perspective(var(--perspective)) rotate3d(0, 0, 0, 0deg);
+    transform:rotateX(-50deg) rotateY(0deg);
   } to {
-  transform: perspective(var(--perspective)) rotate3d(0, 1, 0, 360deg);
+  transform:rotateX(-50deg) rotateY(360deg);
       }
 }
 
@@ -54,6 +53,6 @@
 .scene .rotation .item img{
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
